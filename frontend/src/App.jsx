@@ -31,7 +31,7 @@ const TODOS_URL = `${API_URL}/todos`;
     e.preventDefault();
     if (input.trim() === "") return;
 
-    fetch(API_URL, {
+    fetch(TODOS_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const TODOS_URL = `${API_URL}/todos`;
   }
 
   function deleteTodo(id) {
-    fetch(API_URL + "/" + id, {
+    fetch(TODOS_URL + "/" + id, {
       method: "DELETE",
     })
       .then(function () {
@@ -73,7 +73,7 @@ const TODOS_URL = `${API_URL}/todos`;
       return todo._id === id;
     });
 
-    fetch(API_URL + "/" + id, {
+    fetch(TODOS_URL + "/" + id, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const TODOS_URL = `${API_URL}/todos`;
   function saveEdit(id) {
     if (editText.trim() === "") return;
 
-    fetch(API_URL + "/" + id, {
+    fetch(TODOS_URL + "/" + id, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
