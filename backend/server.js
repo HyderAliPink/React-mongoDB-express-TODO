@@ -12,7 +12,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://todo-frontend-fjxp.onrender.com"
+    "https://todo-frontend-jrah.onrender.com"
   ],
   credentials: true
 }));
