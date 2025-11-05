@@ -7,14 +7,15 @@ function App() {
   const [editId, setEditId] = useState(null);
   const [editText, setEditText] = useState("");
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001/todos";
+ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+const TODOS_URL = `${API_URL}/todos`;
 
   useEffect(function () {
     fetchTodos();
   }, []);
 
   function fetchTodos() {
-    fetch(API_URL)
+    fetch(TODOS_URL)
       .then(function (response) {
         return response.json();
       })
