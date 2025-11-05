@@ -14,7 +14,9 @@ app.use(cors({
     "http://localhost:5174",
     "https://todo-frontend-jrah.onrender.com"
   ],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
